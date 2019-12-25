@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="ZebraScanner" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>ZebraScanner</name>
+	<js-module name="ZebraScanner" src="www/ZebraScanner.js">
+		<clobbers target="ZebraScanner" />
+	</js-module>
+
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="ZebraScanner">
+				<param name="android-package" value="com.bullzer.cordova.emdkscanner.ZebraScanner" />
+			</feature>
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+			<uses-permission android:name="com.symbol.emdk.permission.EMDK" />
+		</config-file>
+
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<uses-library android:name="com.symbol.emdk" android:required="false" />
+		</config-file>
+
+		<framework src="src/android/extras.gradle" custom="true" type="gradleReference" />
+
+		<source-file src="src/android/ZebraScanner.java" target-dir="src/com/bullzer/cordova/emdkscanner" />
+		<source-file src="src/android/com.symbol.emdk.jar" target-dir="libs" />
+	</platform>
+</plugin>

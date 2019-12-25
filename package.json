@@ -1,0 +1,21 @@
+{
+  "name": "@wylgng/zebra-scanner",
+  "version": "1.0.0",
+  "description": "Cordova Plugin for Zebra supported devices ",
+  "main": "EmdkScanner.js",
+  "cordova": {
+    "id": "ZebraScanner",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bullzer/cordova-plugin-emdkscanner.git"
+  },
+  "keywords": [
+    "cordova"
+  ],
+  "author": "wylgng",
+  "license": "MIT"
+}
